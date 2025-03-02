@@ -3,31 +3,31 @@
 ## Outline of lecture
 
 1.  Discrete distributions [[code for/from
-    lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2024/blob/main/notebooks/01-distributions.html)]
+    lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2025/blob/main/notebooks/01-distributions.html)]
 2.  Maximum Likelihood Estimation (MLE) [[code for/from
-    lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2024/blob/main/notebooks/02-mle.html)]
+    lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2025/blob/main/notebooks/02-mle.html)]
 3.  Goodness of fit (GoF) [[code for/from
-    lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2024/blob/main/notebooks/03-gof.html)] [[info about `goodfit`](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2024/blob/main/notebooks/03-gof-extra.html)]
+    lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2025/blob/main/notebooks/03-gof.html)] [[info about `goodfit`](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2025/blob/main/notebooks/03-gof-extra.html)]
 4. Contingency tables:
-    + Simpson's paradox [[code for/from lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2024/blob/main/notebooks/04-simpson-paradox.html)]
-    + Contingency tables and Cramer's V [[code for/from lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2024/blob/main/notebooks/05-ctables.html)]
-5. Categorical data in regression [[code for/from lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2024/blob/main/notebooks/06-linreg.html)]
+    + Simpson's paradox [[code for/from lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2025/blob/main/notebooks/04-simpson-paradox.html)]
+    + Contingency tables and Cramer's V [[code for/from lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2025/blob/main/notebooks/05-ctables.html)]
+5. Categorical data in regression [[code for/from lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2025/blob/main/notebooks/06-linreg.html)]
 6. Generalized linear models:
 
-    + Logistic regression [[code for/from lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2024/blob/main/notebooks/07-glm-lr.html)]
-   + Poisson and Negative binomial regression [[code for/from lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2024/blob/main/notebooks/08-glm-count.html)]
-   + Zero-inflated Poisson (ZIP) and zero-inflated negative binomial (ZINB) [[code for/from lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2024/blob/main/notebooks/09-zip-zinb.html)]
-   + Hurdle Poisson (HP) and Hurdle negative binomial [[code for/from lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2024/blob/main/notebooks/10-hurdle.html)]
+    + Logistic regression [[code for/from lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2025/blob/main/notebooks/07-glm-lr.html)]
+   + Poisson and Negative binomial regression [[code for/from lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2025/blob/main/notebooks/08-glm-count.html)]
+   + Zero-inflated Poisson (ZIP) and zero-inflated negative binomial (ZINB) [[code for/from lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2025/blob/main/notebooks/09-zip-zinb.html)]
+   + Hurdle Poisson (HP) and Hurdle negative binomial [[code for/from lecture](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2025/blob/main/notebooks/10-hurdle.html)]
 7. Generalized estimating equations [[code for/from lecture]()]
    
 ## Case study
 
-- case study [task description](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2024/blob/main/case-study/case-study.html)
+- case study [task description](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2025/blob/main/case-study/case-study.html)
 - [dataset](case-study/school-absence-for-lecture.xlsx)
 
 ## Example final test
 
-[Here](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2024/blob/main/example-test/example-test.html) is an example of the final test.
+[Here](https://htmlpreview.github.io/?https://github.com/DepartmentOfStatisticsPUE/cda-2025/blob/main/example-test/example-test.html) is an example of the final test.
 
 ## Required packages / modules
 
