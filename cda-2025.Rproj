@@ -1,0 +1,20 @@
+Version: 1.0
+ProjectId: 146c0ff1-8243-45cd-853f-897c2227d703
+
+RestoreWorkspace: Default
+SaveWorkspace: Default
+AlwaysSaveHistory: Default
+
+EnableCodeIndexing: Yes
+UseSpacesForTab: Yes
+NumSpacesForTab: 2
+Encoding: UTF-8
+
+RnwWeave: knitr
+LaTeX: pdfLaTeX
+
+PythonType: conda
+PythonVersion: 3.11.7
+PythonPath: /opt/homebrew/anaconda3/bin/python3.11
+
+SpellingDictionary: en_GB
