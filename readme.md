@@ -92,6 +92,6 @@ Python 3.10.7 (v3.10.7:6cc6b13308, Sep  5 2022, 14:02:52)
 ```
 
 ``` julia
-Julia Version 1.9.0-rc1
-Commit 3b2e0d8fbc1 (2023-03-07 07:51 UTC)
+Julia Version 1.11.3
+Commit d63adeda50d (2025-01-21 19:42 UTC)
 ```

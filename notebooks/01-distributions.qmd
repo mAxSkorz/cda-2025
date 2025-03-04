@@ -1,5 +1,5 @@
 ---
-title: "Discrete distributions "
+title: "Discrete distributions"
 format: 
   html:
     self-contained: true
@@ -13,10 +13,10 @@ execute:
 ---
 
 ```{r setup, echo = FALSE}
-JuliaCall::julia_setup(JULIA_HOME = "/Applications/Julia-1.9.app/Contents/Resources/julia/bin/")
+JuliaCall::julia_setup(JULIA_HOME = "/Applications/Julia-1.11.app/Contents/Resources/julia/bin/")
 knitr::opts_chunk$set(engine.path = list(
-  python = "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10",
-  julia = "/Applications/Julia-1.8.app/Contents/Resources/julia/bin/"
+  python = "/opt/homebrew/anaconda3/bin/python3.11",
+  julia = "/Applications/Julia-1.11.app/Contents/Resources/julia/bin/"
 ))
 ```
 
@@ -65,7 +65,7 @@ using Random
 ```
 :::
 
-## Exercises from lectures (2023.02.28)
+## Exercises from lectures (2025)
 
 ::: panel-tabset
 ## R
@@ -165,7 +165,7 @@ rand(Poisson(1.5),10)
 ```
 :::
 
-## Exercises from lectures (2023.03.14)
+## Exercises from lectures (2025)
 
 ### Exercise 1
 
