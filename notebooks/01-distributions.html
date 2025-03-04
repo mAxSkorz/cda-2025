@@ -3277,315 +3277,19 @@ window.Quarto = {
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> st</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.2.0 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/__init__.py&quot;, line 26, in &lt;module&gt;
-    from pandas.compat import (
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/compat/__init__.py&quot;, line 27, in &lt;module&gt;
-    from pandas.compat.pyarrow import (
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/compat/pyarrow.py&quot;, line 8, in &lt;module&gt;
-    import pyarrow as pa
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pyarrow/__init__.py&quot;, line 65, in &lt;module&gt;
-    import pyarrow.lib as _lib
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-AttributeError: _ARRAY_API not found
-
-A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.2.0 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/__init__.py&quot;, line 49, in &lt;module&gt;
-    from pandas.core.api import (
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/api.py&quot;, line 9, in &lt;module&gt;
-    from pandas.core.dtypes.dtypes import (
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/dtypes/dtypes.py&quot;, line 24, in &lt;module&gt;
-    from pandas._libs import (
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pyarrow/__init__.py&quot;, line 65, in &lt;module&gt;
-    import pyarrow.lib as _lib
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-AttributeError: _ARRAY_API not found
-
-A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.2.0 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/__init__.py&quot;, line 49, in &lt;module&gt;
-    from pandas.core.api import (
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/api.py&quot;, line 28, in &lt;module&gt;
-    from pandas.core.arrays import Categorical
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/__init__.py&quot;, line 1, in &lt;module&gt;
-    from pandas.core.arrays.arrow import ArrowExtensionArray
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/arrow/__init__.py&quot;, line 5, in &lt;module&gt;
-    from pandas.core.arrays.arrow.array import ArrowExtensionArray
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/arrow/array.py&quot;, line 50, in &lt;module&gt;
-    from pandas.core import (
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/ops/__init__.py&quot;, line 8, in &lt;module&gt;
-    from pandas.core.ops.array_ops import (
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/ops/array_ops.py&quot;, line 56, in &lt;module&gt;
-    from pandas.core.computation import expressions
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/computation/expressions.py&quot;, line 21, in &lt;module&gt;
-    from pandas.core.computation.check import NUMEXPR_INSTALLED
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/computation/check.py&quot;, line 5, in &lt;module&gt;
-    ne = import_optional_dependency(&quot;numexpr&quot;, errors=&quot;warn&quot;)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/compat/_optional.py&quot;, line 135, in import_optional_dependency
-    module = importlib.import_module(name)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/importlib/__init__.py&quot;, line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/numexpr/__init__.py&quot;, line 24, in &lt;module&gt;
-    from numexpr.interpreter import MAX_THREADS, use_vml, __BLOCK_SIZE1__
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-AttributeError: _ARRAY_API not found
-
-A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.2.0 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/__init__.py&quot;, line 49, in &lt;module&gt;
-    from pandas.core.api import (
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/api.py&quot;, line 28, in &lt;module&gt;
-    from pandas.core.arrays import Categorical
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/__init__.py&quot;, line 1, in &lt;module&gt;
-    from pandas.core.arrays.arrow import ArrowExtensionArray
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/arrow/__init__.py&quot;, line 5, in &lt;module&gt;
-    from pandas.core.arrays.arrow.array import ArrowExtensionArray
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/arrow/array.py&quot;, line 64, in &lt;module&gt;
-    from pandas.core.arrays.masked import BaseMaskedArray
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/arrays/masked.py&quot;, line 60, in &lt;module&gt;
-    from pandas.core import (
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/core/nanops.py&quot;, line 52, in &lt;module&gt;
-    bn = import_optional_dependency(&quot;bottleneck&quot;, errors=&quot;warn&quot;)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/pandas/compat/_optional.py&quot;, line 135, in import_optional_dependency
-    module = importlib.import_module(name)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/importlib/__init__.py&quot;, line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-  File &quot;/opt/homebrew/anaconda3/lib/python3.11/site-packages/bottleneck/__init__.py&quot;, line 7, in &lt;module&gt;
-    from .move import (move_argmax, move_argmin, move_max, move_mean, move_median,
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 122, in _find_and_load_hook
-    return _run_hook(name, _hook)
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 96, in _run_hook
-    module = hook()
-  File &quot;/Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/reticulate/python/rpytools/loader.py&quot;, line 120, in _hook
-    return _find_and_load(name, import_)
-AttributeError: _ARRAY_API not found</code></pre>
-</div>
 </div>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <p>Install modules</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Pkg</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">Pkg</span>.<span class="fu">add</span>([<span class="st">&quot;DataFrames&quot;</span>, <span class="st">&quot;Distributions&quot;</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Pkg</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">Pkg</span>.<span class="fu">add</span>([<span class="st">&quot;DataFrames&quot;</span>, <span class="st">&quot;Distributions&quot;</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Load packages</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">DataFrames</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Distributions</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Random</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">DataFrames</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Distributions</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Random</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -3599,28 +3303,28 @@ AttributeError: _ARRAY_API not found</code></pre>
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <p>Exercise 1: generate 10 pseudo-random numbers from Bernoulli(0.7)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">20230228</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rbinom</span>(<span class="at">n=</span><span class="dv">10</span>,<span class="at">size=</span><span class="dv">1</span>,<span class="at">prob=</span><span class="fl">0.7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">20230228</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rbinom</span>(<span class="at">n=</span><span class="dv">10</span>,<span class="at">size=</span><span class="dv">1</span>,<span class="at">prob=</span><span class="fl">0.7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 1 1 1 0 1 1 1 0 0 1</code></pre>
 </div>
 </div>
 <p>Exercise 2: generate 10 pseudo-random numbers from Binomial(50,0.7)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">20230228</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rbinom</span>(<span class="at">n=</span><span class="dv">10</span>,<span class="at">size=</span><span class="dv">50</span>,<span class="at">prob=</span><span class="fl">0.7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">20230228</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rbinom</span>(<span class="at">n=</span><span class="dv">10</span>,<span class="at">size=</span><span class="dv">50</span>,<span class="at">prob=</span><span class="fl">0.7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 40 33 35 32 36 38 36 33 33 38</code></pre>
 </div>
 </div>
 <p>Exercise 3: generate 10 pseudo-random numbers from Poisson(1.5)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">20230228</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rpois</span>(<span class="at">n=</span><span class="dv">10</span>,<span class="at">lambda=</span><span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">20230228</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rpois</span>(<span class="at">n=</span><span class="dv">10</span>,<span class="at">lambda=</span><span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 0 2 1 2 1 0 1 2 2 0</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rpois</span>(<span class="dv">10</span>,<span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rpois</span>(<span class="dv">10</span>,<span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 2 0 1 1 2 3 2 2 2 0</code></pre>
 </div>
@@ -3629,27 +3333,27 @@ AttributeError: _ARRAY_API not found</code></pre>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <p>Exercise 1: generate 10 pseudo-random numbers from Bernoulli(0.7)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">20230228</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">Bernoulli</span>(<span class="fl">0.7</span>)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">random</span>(X, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">20230228</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">Bernoulli</span>(<span class="fl">0.7</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">random</span>(X, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 1 1 1 0 1 1 1 0 0 1</code></pre>
 </div>
 </div>
 <p>Exercise 2: generate 10 pseudo-random numbers from Binomial(50,0.7)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">20230228</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">Binomial</span>(<span class="dv">50</span>, <span class="fl">0.7</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">random</span>(X, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">20230228</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">Binomial</span>(<span class="dv">50</span>, <span class="fl">0.7</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">random</span>(X, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 40 33 35 32 36 38 36 33 33 38</code></pre>
 </div>
 </div>
 <p>Exercise 3: generate 10 pseudo-random numbers from Poisson(1.5)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">20230228</span>)</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">Poisson</span>(<span class="fl">1.5</span>)</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">random</span>(X, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">20230228</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">Poisson</span>(<span class="fl">1.5</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">random</span>(X, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 0 2 1 2 1 0 1 2 2 0</code></pre>
 </div>
@@ -3658,24 +3362,24 @@ AttributeError: _ARRAY_API not found</code></pre>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
 <p>Exercise 1: generate 10 pseudo-random numbers from Bernoulli(0.7)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">20230228</span>)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>st.bernoulli(<span class="fl">0.7</span>).rvs(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">20230228</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>st.bernoulli(<span class="fl">0.7</span>).rvs(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([1, 1, 1, 0, 1, 0, 0, 1, 1, 1])</code></pre>
 </div>
 </div>
 <p>Exercise 2: generate 10 pseudo-random numbers from Binomial(50,0.7)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">20230228</span>)</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>st.binom(<span class="dv">50</span>,<span class="fl">0.7</span>).rvs(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">20230228</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>st.binom(<span class="dv">50</span>,<span class="fl">0.7</span>).rvs(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([36, 38, 35, 27, 35, 33, 33, 36, 34, 36])</code></pre>
 </div>
 </div>
 <p>Exercise 3: generate 10 pseudo-random numbers from Poisson(1.5)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">20230228</span>)</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>st.poisson(<span class="fl">1.5</span>).rvs(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">20230228</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>st.poisson(<span class="fl">1.5</span>).rvs(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([1, 3, 2, 2, 2, 1, 3, 1, 0, 1])</code></pre>
 </div>
@@ -3684,8 +3388,8 @@ AttributeError: _ARRAY_API not found</code></pre>
 <div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
 <p>Exercise 1: generate 10 pseudo-random numbers from Bernoulli(0.7)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Random</span>.<span class="fu">seed!</span>(<span class="fl">20230228</span>);</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rand</span>(<span class="fu">Bernoulli</span>(<span class="fl">0.7</span>),<span class="fl">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Random</span>.<span class="fu">seed!</span>(<span class="fl">20230228</span>);</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rand</span>(<span class="fu">Bernoulli</span>(<span class="fl">0.7</span>),<span class="fl">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>10-element Vector{Bool}:
  1
@@ -3702,8 +3406,8 @@ AttributeError: _ARRAY_API not found</code></pre>
 </div>
 <p>Exercise 2: generate 10 pseudo-random numbers from Binomial(50,0.7)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Random</span>.<span class="fu">seed!</span>(<span class="fl">20230228</span>);</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rand</span>(<span class="fu">Binomial</span>(<span class="fl">50</span>,<span class="fl">0.7</span>),<span class="fl">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Random</span>.<span class="fu">seed!</span>(<span class="fl">20230228</span>);</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rand</span>(<span class="fu">Binomial</span>(<span class="fl">50</span>,<span class="fl">0.7</span>),<span class="fl">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>10-element Vector{Int64}:
  35
@@ -3720,8 +3424,8 @@ AttributeError: _ARRAY_API not found</code></pre>
 </div>
 <p>Exercise 3: generate 10 pseudo-random numbers from Poisson(1.5)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Random</span>.<span class="fu">seed!</span>(<span class="fl">20230228</span>);</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rand</span>(<span class="fu">Poisson</span>(<span class="fl">1.5</span>),<span class="fl">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Random</span>.<span class="fu">seed!</span>(<span class="fl">20230228</span>);</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rand</span>(<span class="fu">Poisson</span>(<span class="fl">1.5</span>),<span class="fl">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>10-element Vector{Int64}:
  1
@@ -3755,7 +3459,7 @@ AttributeError: _ARRAY_API not found</code></pre>
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">p =</span> <span class="fu">dbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>,<span class="dv">10</span>,<span class="fl">0.4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">p =</span> <span class="fu">dbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>,<span class="dv">10</span>,<span class="fl">0.4</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    x            p
 1   0 0.0060466176
@@ -3772,13 +3476,13 @@ AttributeError: _ARRAY_API not found</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="dv">4</span>,<span class="dv">10</span>,<span class="fl">0.4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="dv">4</span>,<span class="dv">10</span>,<span class="fl">0.4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.2508227</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span><span class="fu">pbinom</span>(<span class="dv">6</span>,<span class="dv">10</span>,<span class="fl">0.4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span><span class="fu">pbinom</span>(<span class="dv">6</span>,<span class="dv">10</span>,<span class="fl">0.4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.05476188</code></pre>
 </div>
@@ -3786,10 +3490,10 @@ AttributeError: _ARRAY_API not found</code></pre>
 </div>
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">Binomial</span>(<span class="dv">10</span>, <span class="fl">0.4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">Binomial</span>(<span class="dv">10</span>, <span class="fl">0.4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">p =</span> <span class="fu">pdf</span>(X, <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="at">x =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">p =</span> <span class="fu">pdf</span>(X, <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    x            p
 1   0 0.0060466176
@@ -3806,13 +3510,13 @@ AttributeError: _ARRAY_API not found</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(X, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(X, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.2508227</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span><span class="fu">cdf</span>(X, <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span><span class="fu">cdf</span>(X, <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.05476188</code></pre>
 </div>
@@ -3820,7 +3524,7 @@ AttributeError: _ARRAY_API not found</code></pre>
 </div>
 <div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame({<span class="st">&quot;x&quot;</span>: np.arange(<span class="dv">10</span>), <span class="st">&quot;p&quot;</span> : [st.binom(<span class="dv">10</span>,<span class="fl">0.4</span>).pmf(i) <span class="cf">for</span> i <span class="kw">in</span> np.arange(<span class="dv">10</span>)]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame({<span class="st">&quot;x&quot;</span>: np.arange(<span class="dv">10</span>), <span class="st">&quot;p&quot;</span> : [st.binom(<span class="dv">10</span>,<span class="fl">0.4</span>).pmf(i) <span class="cf">for</span> i <span class="kw">in</span> np.arange(<span class="dv">10</span>)]})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   x         p
 0  0  0.006047
@@ -3836,28 +3540,28 @@ AttributeError: _ARRAY_API not found</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>st.binom(<span class="dv">10</span>,<span class="fl">0.4</span>).pmf(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>st.binom(<span class="dv">10</span>,<span class="fl">0.4</span>).pmf(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.float64(0.250822656)</code></pre>
+<pre><code>0.250822656</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">-</span> st.binom(<span class="dv">10</span>,<span class="fl">0.4</span>).cdf(<span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">-</span> st.binom(<span class="dv">10</span>,<span class="fl">0.4</span>).cdf(<span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.float64(0.05476188160000006)</code></pre>
+<pre><code>0.05476188160000006</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-3-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-4-tab">
 <p>Declare distribution</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>binom <span class="op">=</span> <span class="fu">Binomial</span>(<span class="fl">10</span>,<span class="fl">0.4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>binom <span class="op">=</span> <span class="fu">Binomial</span>(<span class="fl">10</span>,<span class="fl">0.4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Binomial{Float64}(n=10, p=0.4)</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">DataFrame</span>(x <span class="op">=</span> <span class="fl">0</span><span class="op">:</span><span class="fl">10</span>, p <span class="op">=</span> <span class="fu">pdf</span>.(binom,<span class="fl">0</span><span class="op">:</span><span class="fl">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">DataFrame</span>(x <span class="op">=</span> <span class="fl">0</span><span class="op">:</span><span class="fl">10</span>, p <span class="op">=</span> <span class="fu">pdf</span>.(binom,<span class="fl">0</span><span class="op">:</span><span class="fl">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>11×2 DataFrame
  Row │ x      p
@@ -3877,13 +3581,13 @@ AttributeError: _ARRAY_API not found</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(binom, <span class="fl">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pdf</span>(binom, <span class="fl">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0.2508226560000002</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fl">1</span><span class="fu">-cdf</span>(binom,<span class="fl">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fl">1</span><span class="fu">-cdf</span>(binom,<span class="fl">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0.05476188159999995</code></pre>
 </div>
@@ -3900,7 +3604,7 @@ AttributeError: _ARRAY_API not found</code></pre>
 <div class="tab-content">
 <div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ppois</span>(<span class="dv">4</span>,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ppois</span>(<span class="dv">4</span>,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.947347</code></pre>
 </div>
@@ -3908,7 +3612,7 @@ AttributeError: _ARRAY_API not found</code></pre>
 </div>
 <div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cdf</span>(<span class="fu">Poisson</span>(<span class="dv">2</span>),<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cdf</span>(<span class="fu">Poisson</span>(<span class="dv">2</span>),<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.947347</code></pre>
 </div>
@@ -3916,15 +3620,15 @@ AttributeError: _ARRAY_API not found</code></pre>
 </div>
 <div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>st.poisson(<span class="dv">2</span>).cdf(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>st.poisson(<span class="dv">2</span>).cdf(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.float64(0.9473469826562889)</code></pre>
+<pre><code>0.9473469826562889</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-4-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-4-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cdf</span>(<span class="fu">Poisson</span>(<span class="fl">2</span>),<span class="fl">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode julia code-with-copy"><code class="sourceCode julia"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cdf</span>(<span class="fu">Poisson</span>(<span class="fl">2</span>),<span class="fl">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>0.9473469826562888</code></pre>
 </div>

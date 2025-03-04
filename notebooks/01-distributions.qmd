@@ -15,7 +15,7 @@ execute:
 ```{r setup, echo = FALSE}
 JuliaCall::julia_setup(JULIA_HOME = "/Applications/Julia-1.11.app/Contents/Resources/julia/bin/")
 knitr::opts_chunk$set(engine.path = list(
-  python = "/opt/homebrew/anaconda3/bin/python3.11",
+  python = "/opt/anaconda3/bin/python3.12",
   julia = "/Applications/Julia-1.11.app/Contents/Resources/julia/bin/"
 ))
 ```
