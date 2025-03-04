@@ -88,7 +88,7 @@ R version 4.4.2 (2024-10-31)
 ```
 
 ``` python
-Python 3.10.7 (v3.10.7:6cc6b13308, Sep  5 2022, 14:02:52)
+Python 3.11.7 (main, Dec 15 2023, 12:09:56) [Clang 14.0.6 ]
 ```
 
 ``` julia
