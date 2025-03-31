@@ -5,7 +5,7 @@ format:
     self-contained: true
     table-of-contents: true
     number-sections: true
-editor: visual
+editor: source
 execute: 
   eval: true
   warning: false
@@ -23,7 +23,6 @@ library(bayestestR)
 library(ggplot2)
 ```
 
-
 ```{r}
 example_df <- simulate_simpson(n = 100, groups = 5, r = 0.5)
 ```
@@ -36,7 +35,6 @@ p1 <- ggplot(data = example_df, aes(x = V1, y = V2)) +
 p1
 ggsave(p1, file = "../lectures/fig-simps-1.png", width = 7, height = 5)
 ```
-
 
 ```{r}
 p2 <- ggplot(data = example_df, aes(x = V1, y = V2, color = Group)) +
