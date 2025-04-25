@@ -104,19 +104,25 @@ If yes, what is the size of this effect (i.e. correlation)?
 
 ```{r}
 df$vac <- df$vacancies > 0
+table(df$size, df$vac)
 tab1 <- with(df, table(size, vac))
+tab1
+
 prop.table(tab1, margin=1)
+prop.table(tab1, margin=1) |> addmargins()
 prop.table(tab1, margin=2)
+prop.table(tab1, margin=2) |> addmargins()
 mosaicplot(tab1)
 chisq.test(tab1)
 ```
 
 ```{r}
-assocstats(tab1)
+assocstats(tab1) ## vcd
 ```
 
 ```{r}
 xtabs(~size+vac, df) |> summary()
+tab1 |> summary()
 ```
 
 ## Python

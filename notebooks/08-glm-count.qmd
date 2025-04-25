@@ -6,7 +6,7 @@ format:
     table-of-contents: true
     number-sections: true
     df-print: kable
-editor: visual
+editor: source
 execute: 
   eval: true
   warning: false
@@ -21,7 +21,6 @@ knitr::opts_chunk$set(engine.path = list(
 #  julia = "/Applications/Julia-1.9.app/Contents/Resources/julia/bin/"
 ))
 ```
-
 
 # Setup
 
@@ -92,7 +91,6 @@ df=CSV.read("../data/polish-jvs.csv", DataFrame,
                          :size => String, :nace_division => String, :nace => String));
 first(df, 5)
 ```
-
 :::
 
 # Poisson
@@ -109,14 +107,18 @@ m2 <- glm(vacancies ~ size + public + woj, data = df, family = quasipoisson())
 summary(m2)
 ```
 
-Dispersion parameter $\phi = 38.06172$ which can be calculated based on `m1` model:
+Dispersion parameter $\phi = 38.06172$ which can be calculated based on
+`m1` model:
 
 ```{r}
 pearson_r <- residuals(m1, type = "pearson")
 sum(pearson_r^2)/m1$df.residual
 ```
 
-This means that the variance of residuals is 37 times larger than the mean, and thus we should adjust standard errors by `r sqrt(sum(pearson_r^2)/m1$df.residual)`. So, lets check and compare standard errors from `m2` with those from `m1`.
+This means that the variance of residuals is 37 times larger than the
+mean, and thus we should adjust standard errors by
+`r sqrt(sum(pearson_r^2)/m1$df.residual)`. So, lets check and compare
+standard errors from `m2` with those from `m1`.
 
 ```{r}
 summary(summary(m2)$coef[,2]/summary(m1)$coef[,2])
@@ -127,7 +129,6 @@ Now, compare estimated parameters and their standard errors.
 ```{r}
 modelsummary(list("Poisson"=m1, "QPoisson"=m2))
 ```
-
 
 ```{r}
 rootogram(m1, main= "Poisson")
@@ -140,25 +141,27 @@ glm.diag.plots(m1)
 ```{r}
 exp(coef(m1))
 ```
+
 Interpretation:
 
-+ if the company size decreases from big to medium (ceteris paribus) then average number of vacancies decrease by 86% (1- 0.14).
-+ if we compare companies from dolnośląskie (02) with mazowieckie (14, `woj14`; ceteris paribus) then average number of vacancies will increase by 80%.
+-   if the company size decreases from big to medium (ceteris paribus)
+    then average number of vacancies decrease by 86% (1- 0.14).
+-   if we compare companies from dolnośląskie (02) with mazowieckie (14,
+    `woj14`; ceteris paribus) then average number of vacancies will
+    increase by 80%.
 
 ## Python
-
 
 ```{python}
 m1 = smf.glm(formula="vacancies ~ size + public + woj", data=df, family=sm.families.Poisson()).fit()
 print(m1.summary())
 ```
 
-QuasiPoisson is Negative Binomial type 1 and can be fitted using `statsmodels.discrete.discrete_model.NegativeBinomial(loglike_method="nb2")`
+QuasiPoisson is Negative Binomial type 1 and can be fitted using
+`statsmodels.discrete.discrete_model.NegativeBinomial(loglike_method="nb2")`
 
 ## Julia
-
 :::
-
 
 # Negative binomial
 
@@ -188,9 +191,11 @@ exp(coef(m3))
 
 Interpretation (the same as for Poisson regression):
 
-+ if the company size decreases from big to medium (ceteris paribus) then average number of vacancies decrease by 86% (1- 0.14).
-+ if we compare companies from dolnośląskie (02) with mazowieckie (14, `woj14`; ceteris paribus) then average number of vacancies will increase by 80%.
-
+-   if the company size decreases from big to medium (ceteris paribus)
+    then average number of vacancies decrease by 86% (1- 0.14).
+-   if we compare companies from dolnośląskie (02) with mazowieckie (14,
+    `woj14`; ceteris paribus) then average number of vacancies will
+    increase by 80%.
 
 ## Python
 
@@ -200,9 +205,7 @@ print(m3.summary())
 ```
 
 ## Julia
-
 :::
-
 
 # Which model is better?
 
@@ -217,9 +220,7 @@ BIC(m1, m3)
 modelplot(list("Poisson"=m1,"QuasiPoisson"=m2, "NegBin"=m3))
 ```
 
-
 ## Python
 
 ## Julia
-
 :::
