@@ -6,7 +6,7 @@ format:
     table-of-contents: true
     number-sections: true
     df-print: kable
-editor: visual
+editor: source
 execute: 
   eval: true
   warning: false
@@ -141,7 +141,9 @@ Let's write down this model
 
 $$
 \operatorname{Pr}(\text { Has vacancy }=1 \mid \text { public })=\frac{\exp (-2.03+0.12 \times \text { public })}{1+\exp (-2.03+0.12 \times \text { public })}
-$$ In order to interpret results of logistic regression we should calculate odds ratio which can be done by just using $\exp(\mathbf{\beta})$
+$$ In order to interpret results of logistic regression we should
+calculate odds ratio which can be done by just using
+$\exp(\mathbf{\beta})$
 
 ```{r}
 exp(coef(model1))
@@ -149,8 +151,10 @@ exp(coef(model1))
 
 Interpretation of `1.13`:
 
--   probability that a\~*public* entity is 1.13 higher than the probability that a\~private entity has a\~vacancy.
--   another interpretation: for 100 private entities with vacancies, we will have 113 public entities with vacancies
+-   probability that a\~*public* entity is 1.13 higher than the
+    probability that a\~private entity has a\~vacancy.
+-   another interpretation: for 100 private entities with vacancies, we
+    will have 113 public entities with vacancies
 
 ## Python
 
@@ -171,7 +175,8 @@ m1 = glm(@formula(has_vacancy ~ public), df, Binomial())
 
 ## Example 2 -- aggregated data
 
-We show that it is possible to use aggregated data for logistic regression.
+We show that it is possible to use aggregated data for logistic
+regression.
 
 ::: panel-tabset
 ## R
@@ -209,13 +214,15 @@ model3 <- glm(formula = has_vacancy ~ public + size + nace,
 summary(model3)
 ```
 
-Now, the interpretation becomes more complex, so it is better to look at plots.
+Now, the interpretation becomes more complex, so it is better to look at
+plots.
 
 ```{r}
 modelplot(model3, exponentiate = T) 
 ```
 
-Additionally we can check whether a\~given variable as a whole is "significant" using `car::Anova(type=2)`
+Additionally we can check whether a\~given variable as a whole is
+"significant" using `car::Anova(type=2)`
 
 ```{r}
 car::Anova(model3, type = 2) |> broom::tidy()

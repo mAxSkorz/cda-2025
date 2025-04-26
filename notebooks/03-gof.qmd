@@ -5,7 +5,7 @@ format:
     self-contained: true
     table-of-contents: true
     number-sections: true
-editor: visual
+editor: source
 execute: 
   eval: true
   warning: false
@@ -13,10 +13,10 @@ execute:
 ---
 
 ```{r setup, echo = FALSE}
-JuliaCall::julia_setup(JULIA_HOME = "/Applications/Julia-1.9.app/Contents/Resources/julia/bin/")
+JuliaCall::julia_setup(JULIA_HOME = "/Applications/Julia-1.11.app/Contents/Resources/julia/bin/")
 knitr::opts_chunk$set(engine.path = list(
-  python = "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3.10",
-  julia = "/Applications/Julia-1.9.app/Contents/Resources/julia/bin/"
+  python = "/opt/anaconda3/bin/python3.12",
+  julia = "/Applications/Julia-1.11.app/Contents/Resources/julia/bin/"
 ))
 ```
 
@@ -104,16 +104,24 @@ save data for other languages
 cat(x, sep = "\n", file = "nb_sim.txt")
 ```
 
-Small note regarding the `vcd` package. It gives correct answers but in a slightly different way.
+Small note regarding the `vcd` package. It gives correct answers but in
+a slightly different way.
 
-1.  `goodfit` function returns a list with `fitted` (expected) frequencies under a given distribution using `pdf` of this distribution
-2.  `summary(goodfit object)` returns a $\chi^2$ and $G^2$ tests using `cdf` of a given distribution. 3. Pearson residuals are calculated as
+1.  `goodfit` function returns a list with `fitted` (expected)
+    frequencies under a given distribution using `pdf` of this
+    distribution
+2.  `summary(goodfit object)` returns a $\chi^2$ and $G^2$ tests using
+    `cdf` of a given distribution. 3. Pearson residuals are calculated
+    as
 
 $$
 \widehat{\text{resid}}_{k,\text{Pearson}} = \frac{n_k - \hat{n}_k}{\sqrt{\hat{n}_k}}
 $$
 
-Thus, if we use `object$fitted` created by `goodfit` to calculate $\chi^2$ and $G^2$ statistics by hand we will get slightly different statistics values than the one returned by `summary.goodfit()` function. Thus, both are accepted results.
+Thus, if we use `object$fitted` created by `goodfit` to calculate
+$\chi^2$ and $G^2$ statistics by hand we will get slightly different
+statistics values than the one returned by `summary.goodfit()` function.
+Thus, both are accepted results.
 
 In this material, we use the first approach in Python and Julia.
 
@@ -135,7 +143,8 @@ rootogram(gof_po, main = "Poisson")
 
 ## Python
 
-Python uses a different specification of negative binomial than we specified in R so we need to rewrite it as follows:
+Python uses a different specification of negative binomial than we
+specified in R so we need to rewrite it as follows:
 
 $$
 p = \frac{\text{size}}{\text{size} + \mu}.
@@ -148,7 +157,9 @@ x = st.nbinom(n = 2, p = 2/(2+3)).rvs(N)
 np.mean(x)
 ```
 
-However, these pseudo-random numbers are not the same as in R. So, to make our example comparable with R, we read data generated from R that was saved to text file.
+However, these pseudo-random numbers are not the same as in R. So, to
+make our example comparable with R, we read data generated from R that
+was saved to text file.
 
 ```{python}
 x = np.loadtxt("nb_sim.txt", dtype = np.int64)
@@ -169,7 +180,8 @@ res.x
 
 **Goodness of fit -- step by step**
 
-$G^2$ and $\chi^2$ GoF can be calculated using `scipy.stats.power_divergence` function
+$G^2$ and $\chi^2$ GoF can be calculated using
+`scipy.stats.power_divergence` function
 
 ```{python}
 x_uniq_vals, x_uniq_counts = np.unique(x, return_counts=True)
@@ -195,7 +207,9 @@ st.power_divergence(x_uniq_counts,
                     lambda_ = 1, ddof = 2)
 ```
 
-**Rootograms** are not available in python. There are some scripts that recreate this plot using `matplotlib`, see https://stackoverflow.com/questions/38252879/how-to-plot-a-hanging-rootogram-in-python
+**Rootograms** are not available in python. There are some scripts that
+recreate this plot using `matplotlib`, see
+https://stackoverflow.com/questions/38252879/how-to-plot-a-hanging-rootogram-in-python
 
 ## Julia
 
@@ -206,7 +220,9 @@ x = rand(NegativeBinomial(2, 2/(2+3)), n);
 mean(x)
 ```
 
-However, these pseudo-random numbers are not the same as in R. So, to make our example comparable with R, we read data generated from R that was saved to text file.
+However, these pseudo-random numbers are not the same as in R. So, to
+make our example comparable with R, we read data generated from R that
+was saved to text file.
 
 ```{julia}
 x = readdlm("nb_sim.txt", Int);
@@ -295,7 +311,8 @@ Details:
     std. residuals:     [-0.236076, 0.223635, -0.151902, -0.0121131, 1.15647, -0.75304, -0.02151, -0.496206, -1.10169, 0.91225, -1.48139, 2.56985, 0.147502, -0.600848, -0.693853, -0.242248, 0.201113, 1.15028, 5.21153]
 ```
 
-Note that p-value is calculated wrongly as correct df is 18 not 20. So correct p-value is:
+Note that p-value is calculated wrongly as correct df is 18 not 20. So
+correct p-value is:
 
 ```{julia}
 1-cdf(Chisq(19), 42.242072813765624)
@@ -359,7 +376,8 @@ X_nb <- goodfit(X, "nbinom")
 X_nb
 ```
 
-Let's now look at $G^2$ test. Results indicate that Poisson and negative binomial distribution fit the data equally well.
+Let's now look at $G^2$ test. Results indicate that Poisson and negative
+binomial distribution fit the data equally well.
 
 ```{r}
 summary(X_po)
@@ -379,13 +397,17 @@ The lower the better -- Poisson seems to be a better distribution
 AIC(X_fit_ll_po, X_fit_ll_nb)
 ```
 
-The lower the better -- Poisson seems to be a better distribution. Note that in this case the difference is higher due to larger number of parameters for NB, so BIC suggest distribution with lower number of parameters.
+The lower the better -- Poisson seems to be a better distribution. Note
+that in this case the difference is higher due to larger number of
+parameters for NB, so BIC suggest distribution with lower number of
+parameters.
 
 ```{r}
 BIC(X_fit_ll_po, X_fit_ll_nb)
 ```
 
-Now, let's see what LR test will tell. For this example it seems that two distributions equally well fit the data.
+Now, let's see what LR test will tell. For this example it seems that
+two distributions equally well fit the data.
 
 ```{r}
 LR_test <- 2*X_fit_ll_nb$loglik - 2*X_fit_ll_po$loglik
@@ -393,7 +415,8 @@ LR_test_p <- pchisq(LR_test, 1, lower.tail = F)
 data.frame(LR=LR_test, df = 1, p_val = LR_test_p)
 ```
 
-**Conclusion**: based only on the data we cannot indicate which distribution fit the data better.
+**Conclusion**: based only on the data we cannot indicate which
+distribution fit the data better.
 
 ## Python
 
